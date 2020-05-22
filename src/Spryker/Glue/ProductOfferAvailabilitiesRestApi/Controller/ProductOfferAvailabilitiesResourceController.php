@@ -27,7 +27,7 @@ class ProductOfferAvailabilitiesResourceController extends AbstractController
      *              "in": "header"
      *          }],
      *          "responses": {
-     *              "400": "Concrete product id is not specified."
+     *              "400": "Product offer id is not specified."
      *          }
      *     }
      * })
