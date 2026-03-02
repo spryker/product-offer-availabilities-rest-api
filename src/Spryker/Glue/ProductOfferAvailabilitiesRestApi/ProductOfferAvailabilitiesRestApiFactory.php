@@ -21,9 +21,6 @@ use Spryker\Glue\ProductOfferAvailabilitiesRestApi\Processor\RestResponseBuilder
 
 class ProductOfferAvailabilitiesRestApiFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Glue\ProductOfferAvailabilitiesRestApi\Processor\Reader\ProductOfferAvailabilityReaderInterface
-     */
     public function createProductOfferAvailabilityReader(): ProductOfferAvailabilityReaderInterface
     {
         return new ProductOfferAvailabilityReader(
@@ -33,17 +30,11 @@ class ProductOfferAvailabilitiesRestApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ProductOfferAvailabilitiesRestApi\Processor\Mapper\ProductOfferAvailabilityMapperInterface
-     */
     public function createProductOfferAvailabilityMapper(): ProductOfferAvailabilityMapperInterface
     {
         return new ProductOfferAvailabilityMapper();
     }
 
-    /**
-     * @return \Spryker\Glue\ProductOfferAvailabilitiesRestApi\Processor\RestResponseBuilder\ProductOfferAvailabilityRestResponseBuilderInterface
-     */
     public function createProductOfferAvailabilityRestResponseBuilder(): ProductOfferAvailabilityRestResponseBuilderInterface
     {
         return new ProductOfferAvailabilityRestResponseBuilder(
@@ -52,25 +43,16 @@ class ProductOfferAvailabilitiesRestApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ProductOfferAvailabilitiesRestApi\Dependency\Client\ProductOfferAvailabilitiesRestApiToProductOfferAvailabilityStorageClientInterface
-     */
     public function getProductOfferAvailabilityStorageClient(): ProductOfferAvailabilitiesRestApiToProductOfferAvailabilityStorageClientInterface
     {
         return $this->getProvidedDependency(ProductOfferAvailabilitiesRestApiDependencyProvider::CLIENT_PRODUCT_OFFER_AVAILABILITY_STORAGE);
     }
 
-    /**
-     * @return \Spryker\Glue\ProductOfferAvailabilitiesRestApi\Dependency\Client\ProductOfferAvailabilitiesRestApiToStoreClientInterface
-     */
     public function getStoreClient(): ProductOfferAvailabilitiesRestApiToStoreClientInterface
     {
         return $this->getProvidedDependency(ProductOfferAvailabilitiesRestApiDependencyProvider::CLIENT_STORE);
     }
 
-    /**
-     * @return \Spryker\Glue\ProductOfferAvailabilitiesRestApi\Processor\Expander\ProductOfferAvailabilityExpanderInterface
-     */
     public function createProductOfferAvailabilityExpander(): ProductOfferAvailabilityExpanderInterface
     {
         return new ProductOfferAvailabilityExpander(

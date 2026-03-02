@@ -19,25 +19,11 @@ interface ProductOfferAvailabilityRestResponseBuilderInterface
      */
     public function createProductOfferAvailabilityRestResources(array $productOfferAvailabilityStorageTransfers): array;
 
-    /**
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function createProductOfferAvailabilityEmptyRestResponse(): RestResponseInterface;
 
-    /**
-     * @param \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResourceInterface $productOfferAvailabilityRestResource
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function createProductOfferAvailabilityRestResponse(RestResourceInterface $productOfferAvailabilityRestResource): RestResponseInterface;
 
-    /**
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function createProductOfferIdNotSpecifiedErrorResponse(): RestResponseInterface;
 
-    /**
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function createProductOfferNotFoundErrorResponse(): RestResponseInterface;
 }

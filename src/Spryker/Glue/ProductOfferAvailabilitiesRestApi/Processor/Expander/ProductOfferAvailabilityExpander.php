@@ -17,9 +17,6 @@ class ProductOfferAvailabilityExpander implements ProductOfferAvailabilityExpand
      */
     protected $productOfferAvailabilityReader;
 
-    /**
-     * @param \Spryker\Glue\ProductOfferAvailabilitiesRestApi\Processor\Reader\ProductOfferAvailabilityReaderInterface $productOfferAvailabilityReader
-     */
     public function __construct(ProductOfferAvailabilityReaderInterface $productOfferAvailabilityReader)
     {
         $this->productOfferAvailabilityReader = $productOfferAvailabilityReader;

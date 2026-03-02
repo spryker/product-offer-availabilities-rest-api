@@ -31,11 +31,6 @@ class ProductOfferAvailabilityReader implements ProductOfferAvailabilityReaderIn
      */
     protected $productOfferAvailabilityRestResponseBuilder;
 
-    /**
-     * @param \Spryker\Glue\ProductOfferAvailabilitiesRestApi\Dependency\Client\ProductOfferAvailabilitiesRestApiToProductOfferAvailabilityStorageClientInterface $productOfferAvailabilityStorageClient
-     * @param \Spryker\Glue\ProductOfferAvailabilitiesRestApi\Dependency\Client\ProductOfferAvailabilitiesRestApiToStoreClientInterface $storeClient
-     * @param \Spryker\Glue\ProductOfferAvailabilitiesRestApi\Processor\RestResponseBuilder\ProductOfferAvailabilityRestResponseBuilderInterface $productOfferAvailabilityRestResponseBuilder
-     */
     public function __construct(
         ProductOfferAvailabilitiesRestApiToProductOfferAvailabilityStorageClientInterface $productOfferAvailabilityStorageClient,
         ProductOfferAvailabilitiesRestApiToStoreClientInterface $storeClient,
@@ -46,11 +41,6 @@ class ProductOfferAvailabilityReader implements ProductOfferAvailabilityReaderIn
         $this->productOfferAvailabilityRestResponseBuilder = $productOfferAvailabilityRestResponseBuilder;
     }
 
-    /**
-     * @param \Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface $restRequest
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function getProductOfferAvailabilities(RestRequestInterface $restRequest): RestResponseInterface
     {
         $productOfferRestResource = $restRequest->findParentResourceByType(ProductOfferAvailabilitiesRestApiConfig::RESOURCE_PRODUCT_OFFERS);
