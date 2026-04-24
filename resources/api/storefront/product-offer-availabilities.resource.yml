@@ -1,0 +1,56 @@
+resource:
+    name: ProductOfferAvailabilities
+    shortName: product-offer-availabilities
+    description: 'Storefront availability for product offers'
+
+    provider: Spryker\Glue\ProductOfferAvailabilitiesRestApi\Api\Storefront\Provider\ProductOfferAvailabilitiesStorefrontProvider
+
+    paginationEnabled: false
+
+    operations:
+        - type: GetCollection
+          uriTemplate: /product-offers/{productOfferReference}/product-offer-availabilities
+          description: 'Retrieve availability for a merchant product offer'
+
+    includableIn:
+        - resource: ProductOffers
+          relationshipName: product-offer-availabilities
+          uriVariableMappings:
+              productOfferReference: productOfferReference
+
+    properties:
+        productOfferReference:
+            type: string
+            identifier: true
+            writable: false
+            readable: true
+            description: 'Product offer reference (parent id)'
+            openapiContext:
+                example: 'offer5'
+
+        isNeverOutOfStock:
+            type: boolean
+            writable: false
+            readable: true
+            required: false
+            description: 'Flag if the offer is never out of stock'
+            openapiContext:
+                example: false
+
+        quantity:
+            type: string
+            writable: false
+            readable: true
+            required: false
+            description: 'Available quantity'
+            openapiContext:
+                example: '10.0000000000'
+
+        availability:
+            type: boolean
+            writable: false
+            readable: true
+            required: false
+            description: 'Whether the offer is available'
+            openapiContext:
+                example: true
