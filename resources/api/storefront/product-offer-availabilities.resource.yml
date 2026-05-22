@@ -12,12 +12,6 @@ resource:
           uriTemplate: /product-offers/{productOfferReference}/product-offer-availabilities
           description: 'Retrieve availability for a merchant product offer'
 
-    includableIn:
-        - resource: ProductOffers
-          relationshipName: product-offer-availabilities
-          uriVariableMappings:
-              productOfferReference: productOfferReference
-
     properties:
         productOfferReference:
             type: string
