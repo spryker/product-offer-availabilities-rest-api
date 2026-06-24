@@ -12,11 +12,15 @@ use Spryker\Glue\Kernel\AbstractBundleConfig;
 class ProductOfferAvailabilitiesRestApiConfig extends AbstractBundleConfig
 {
     /**
+     * @api
+     *
      * @var string
      */
     public const RESOURCE_PRODUCT_OFFER_AVAILABILITIES = 'product-offer-availabilities';
 
     /**
+     * @api
+     *
      * @uses \Spryker\Glue\MerchantProductOffersRestApi\MerchantProductOffersRestApiConfig::RESOURCE_PRODUCT_OFFERS
      *
      * @var string
@@ -42,6 +46,8 @@ class ProductOfferAvailabilitiesRestApiConfig extends AbstractBundleConfig
     public const RESPONSE_DETAIL_PRODUCT_OFFER_NOT_FOUND = 'Product offer was not found.';
 
     /**
+     * @api
+     *
      * @uses \Spryker\Glue\MerchantProductOffersRestApi\MerchantProductOffersRestApiConfig::RESPONSE_CODE_PRODUCT_OFFER_ID_IS_NOT_SPECIFIED
      *
      * @var string
@@ -49,6 +55,8 @@ class ProductOfferAvailabilitiesRestApiConfig extends AbstractBundleConfig
     public const RESPONSE_CODE_PRODUCT_OFFER_ID_IS_NOT_SPECIFIED = '3702';
 
     /**
+     * @api
+     *
      * @uses \Spryker\Glue\MerchantProductOffersRestApi\MerchantProductOffersRestApiConfig::RESPONSE_DETAIL_PRODUCT_OFFER_ID_SKU_IS_NOT_SPECIFIED
      *
      * @var string
