@@ -11,6 +11,9 @@ resource:
         - type: GetCollection
           uriTemplate: /product-offers/{productOfferReference}/product-offer-availabilities
           description: 'Retrieve availability for a merchant product offer'
+          extraProperties:
+              notFoundCode: '3701'
+              notFoundMessage: 'Product offer was not found.'
           openapiContext:
               responses:
                   200:
