@@ -10,6 +10,8 @@
     <transfer name="ProductOfferAvailabilityStorage">
         <property name="availability" type="decimal" description="The stock level or availability of a product."/>
         <property name="isAvailable" type="bool" description="A flag indicating if a product or service is available."/>
+        <property name="productOfferReference" type="string"/>
+        <property name="isNeverOutOfStock" type="bool"/>
     </transfer>
 
     <transfer name="RestErrorMessage">
